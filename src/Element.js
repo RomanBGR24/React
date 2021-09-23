@@ -12,13 +12,14 @@ class Element extends Component {
     }
 
     hideElement(){
-        this.setState((state, prop) => {
-            isHidden: !state.isHidden        }
-    )};
+            this.setState({isHidden: !this.state.isHidden});
+    }
 
     render() {
+        let classValue = !this.state.isHidden && 'element_main';
+
         return(
-             <div className = {!this.state.isHidden && 'element_main'} onClick = {this.hideElement}> 
+             <div className = {classValue} onClick = {this.hideElement}> 
                  F
             </div>
         );
