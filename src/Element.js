@@ -4,7 +4,7 @@ class Element extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            'isHidden': False
+            isHidden: false
         };
     }
 
