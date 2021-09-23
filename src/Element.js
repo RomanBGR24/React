@@ -12,7 +12,7 @@ class Element extends Component {
     }
 
     hideElement(){
-            this.setState({isHidden: !this.state.isHidden});
+            this.setState((state, props) => ({isHidden: !state.isHidden}));
     }
 
     render() {

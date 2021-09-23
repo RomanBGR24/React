@@ -1,7 +1,9 @@
 .element_main{
     padding: 10px;
     margin: 10px;
-    background-color: "#FFDE00";
+    border-style: solid;
+    border-color: blue;
+    background-color: #FFDE00;
     width: 50px;
     height: 50px;
 }
