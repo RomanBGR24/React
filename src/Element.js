@@ -9,7 +9,7 @@ class Element extends Component {
     }
 
     render() {
-        let element_style = {
+        let elementStyle = {
             padding: 10,
             margin: 10,
             backgroundColor: "#FFDE00",
@@ -18,7 +18,7 @@ class Element extends Component {
         };
 
         return(
-             <div classname = {element_style}>
+             <div style = {elementStyle}>
                  F
             </div>
         );

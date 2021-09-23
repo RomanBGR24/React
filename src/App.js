@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import Element from './Element';
-import Clock from './Clock';
+//import Clock from './Clock';
 
 class App extends Component {
   render() {
