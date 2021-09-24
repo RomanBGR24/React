@@ -16,9 +16,14 @@ class App extends Component {
     
     const child_text = this.props.children;
 
+    function hideElement(){
+      this.setState((state, prop) => {
+          isHidden: !isHidden        }
+    )};
+
     let array_of_elements = [];
     for (let i = 0; i < 5; i++){
-      array_of_elements.push(<Element />);
+      array_of_elements.push(<Element hideElementEvent = {this.hideElement} />);
     }
     return (
       <div >
@@ -27,8 +32,9 @@ class App extends Component {
         <br/>
         <br/>
         <p> And here some text from children: {child_text} </p>
-            {array_of_elements}
-
+        <ul>
+            {array_of_element.map(elem=>{<li key={index}>{elem}</li>})}
+        </ul>
       </div>
     );
   }
