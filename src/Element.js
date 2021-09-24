@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import './Element.css'
 
 class Element extends Component {
     constructor(props) {
@@ -6,19 +7,18 @@ class Element extends Component {
         this.state = {
             isHidden: false
         };
+
+        this.hideElement = this.hideElement.bind(this);
     }
 
-    render() {
-        let elementStyle = {
-            padding: 10,
-            margin: 10,
-            backgroundColor: "#FFDE00",
-            width: 50,
-            height: 50,
-        };
+    hideElement(){
+        this.setState((state, prop) => {
+            isHidden: !isHidden        }
+    )};
 
+    render() {
         return(
-             <div style = {elementStyle}>
+             <div className = {!this.state.isHidden && 'element_main'} onClick = {this.hideElement}> 
                  F
             </div>
         );
